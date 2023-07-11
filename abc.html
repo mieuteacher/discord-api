@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Discord Plugins</h1>
+    <form onsubmit="submitForm(event)">
+        <input name="chatContent" type="text" placeholder="tin nhắn của bạn">
+        <button type="submit">Gửi</button>
+    </form>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            let targetPoint = "/discord?content=" +  event.target.chatContent.value;
+            window.location.href = targetPoint;
+        }
+    </script>
+</body>
+</html>
